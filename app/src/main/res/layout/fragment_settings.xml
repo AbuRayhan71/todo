@@ -5,7 +5,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -13,150 +14,183 @@
             android:orientation="vertical"
             tools:context=".presentation.fragments.SettingsFragment">
 
+            <!-- Configuration Header -->
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/settings"
-                android:textSize="22sp"
-                android:textStyle="bold" />
+                android:text="Settings"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
 
+
+            <!-- General Settings Header -->
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:text="@string/notification"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <com.google.android.material.card.MaterialCardView
-                style="@style/Widget.App.CardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:elevation="8dp"
-                app:strokeColor="@color/light_grey"
-                app:strokeWidth="1dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="@string/low_priority_tasks" />
-
-                <com.google.android.material.switchmaterial.SwitchMaterial
-                    android:id="@+id/low_tasks"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    app:thumbTint="@drawable/switch_thumb_selector"
-                    app:trackTint="@drawable/switch_track_selector"/>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                style="@style/Widget.App.CardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:elevation="8dp"
-                app:strokeColor="@color/light_grey"
-                app:strokeWidth="1dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="@string/medium_priority_tasks" />
-
-                <com.google.android.material.switchmaterial.SwitchMaterial
-                    android:id="@+id/mid_tasks"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    app:thumbTint="@drawable/switch_thumb_selector"
-                    app:trackTint="@drawable/switch_track_selector"/>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                style="@style/Widget.App.CardView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:elevation="8dp"
-                app:strokeColor="@color/light_grey"
-                app:strokeWidth="1dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="@string/high_priority_tasks" />
-
-                <com.google.android.material.switchmaterial.SwitchMaterial
-                    android:id="@+id/high_tasks"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    app:thumbTint="@drawable/switch_thumb_selector"
-                    app:trackTint="@drawable/switch_track_selector" />
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
                 android:text="@string/general"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
 
+            <!-- Dark Theme Setting -->
             <com.google.android.material.card.MaterialCardView
                 style="@style/Widget.App.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:elevation="8dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="4dp"
                 app:strokeColor="@color/light_grey"
                 app:strokeWidth="1dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="Dark Theme" />
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
 
-                <com.google.android.material.switchmaterial.SwitchMaterial
-                    android:id="@+id/dark_theme"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    app:thumbTint="@drawable/switch_thumb_selector"
-                    app:trackTint="@drawable/switch_track_selector" />
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Dark Theme" />
 
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/dark_theme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:thumbTint="@drawable/switch_thumb_selector"
+                        app:trackTint="@drawable/switch_track_selector" />
+                </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Rate the App Setting -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/rateApp"
                 style="@style/Widget.App.CardView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:elevation="8dp"
+                android:layout_marginBottom="8dp"
+                android:elevation="4dp"
                 app:strokeColor="@color/light_grey"
                 app:strokeWidth="1dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="@string/rate_the_app"/>
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
 
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/rate_the_app"/>
+
+                    <ImageView
+                        android:layout_width="56dp"
+                        android:layout_height="55dp"
+                        android:src="@drawable/star" />
+                </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
+            <!-- Notification Settings Header -->
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notification"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+            <!-- Priority Task Settings -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/Widget.App.CardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:elevation="4dp"
+                app:strokeColor="@color/light_grey"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Low Priority Task Setting -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/low_priority_tasks" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/low_tasks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:thumbTint="@drawable/switch_thumb_selector"
+                            app:trackTint="@drawable/switch_track_selector"/>
+                    </LinearLayout>
+
+                    <!-- Medium Priority Task Setting -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/medium_priority_tasks" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/mid_tasks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:thumbTint="@drawable/switch_thumb_selector"
+                            app:trackTint="@drawable/switch_track_selector"/>
+                    </LinearLayout>
+
+                    <!-- High Priority Task Setting -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/high_priority_tasks" />
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:id="@+id/high_tasks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:thumbTint="@drawable/switch_thumb_selector"
+                            app:trackTint="@drawable/switch_track_selector" />
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
 
         </LinearLayout>
 

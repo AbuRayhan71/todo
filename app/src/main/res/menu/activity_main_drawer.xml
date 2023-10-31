@@ -9,7 +9,7 @@
             android:title="Dashboard"/>
         <item
             android:id="@+id/settings_fragment"
-            android:title="Configuration"/>
+            android:title="Settings"/>
         <item
             android:id="@+id/completed_tasks_fragment"
             android:title="Finished Tasks"/>
