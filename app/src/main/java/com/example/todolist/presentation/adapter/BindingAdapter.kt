@@ -30,6 +30,17 @@ fun setCheckStatus(materialCheckBox: MaterialCheckBox, status : Boolean, color: 
     materialCheckBox.isChecked = status
     CompoundButtonCompat.setButtonTintList(materialCheckBox, ColorStateList.valueOf(Color.parseColor(color)))
 }
+@BindingAdapter("backgroundColor")
+fun setBackgroundColor(view: View, colorString: String?) {
+    try {
+        if (colorString != null) {
+            view.setBackgroundColor(Color.parseColor(colorString))
+        }
+    } catch (e: Exception) {
+        // Handle exceptions, e.g., if the color string is invalid
+    }
+}
+
 
 @SuppressLint("SetTextI18n")
 @BindingAdapter("set_date")

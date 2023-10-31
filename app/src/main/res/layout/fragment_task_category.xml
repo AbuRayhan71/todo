@@ -12,7 +12,7 @@
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
             android:textSize="24sp"
             android:textAllCaps="true"
             android:textStyle="bold" />
@@ -22,10 +22,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_below="@+id/text"
             android:textColor="#808080"
             android:text="@string/tasks_to_do"
             android:layout_marginTop="15dp"
-            android:layout_below="@+id/text"
             android:textSize="18sp"
             android:textAllCaps="true"
             android:textStyle="bold" />

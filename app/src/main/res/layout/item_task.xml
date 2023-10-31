@@ -18,7 +18,7 @@
     android:layout_marginTop="8dp"
     app:cardElevation="8dp"
     app:strokeWidth="1dp"
-    app:strokeColor="@color/white"
+    app:strokeColor="@color/teal_200"
     style="@style/Widget.App.CardView">
 
     <RelativeLayout
@@ -29,10 +29,10 @@
 
         <com.google.android.material.checkbox.MaterialCheckBox
             android:id="@+id/isCompleted"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="62dp"
+            android:layout_height="65dp"
             app:check_status="@{taskCategoryInfo.taskInfo.status}"
-            app:view_color="@{taskCategoryInfo.categoryInfo[0].color}"/>
+            app:view_color="@{taskCategoryInfo.categoryInfo[0].color}" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/desciption"
@@ -61,7 +61,7 @@
 
         <com.google.android.material.chip.Chip
             android:id="@+id/priority"
-            android:layout_width="wrap_content"
+            android:layout_width="78dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"

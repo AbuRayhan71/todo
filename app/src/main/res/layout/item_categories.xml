@@ -19,28 +19,28 @@
 
         <LinearLayout
             android:id="@+id/linearLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="127dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
             android:minWidth="150dp"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:gravity="center_horizontal">
+            android:padding="16dp">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/categoryName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@{noOfTaskOfCategory.category}"
                 android:textSize="24sp"
-                android:textStyle="bold"
-                android:text="@{noOfTaskOfCategory.category}" />
+                android:textStyle="bold" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/categoryCount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:textColor="#808080"
                 android:textSize="16sp"
-                android:layout_marginTop="8dp"
                 app:count="@{noOfTaskOfCategory.count}" />
 
             <View
