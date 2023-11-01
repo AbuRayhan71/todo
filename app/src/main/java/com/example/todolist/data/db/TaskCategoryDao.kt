@@ -7,7 +7,8 @@ import com.example.todolist.data.model.NoOfTaskForEachCategory
 import com.example.todolist.data.model.TaskCategoryInfo
 import com.example.todolist.data.model.TaskInfo
 import java.util.*
-
+//This is a Kotlin interface named TaskCategoryDao that defines methods for accessing the database in an Android application using the Room persistence library.
+// Below are the functionalities of each method in this Data Access Object (DAO)
 @Dao
 interface TaskCategoryDao {
     @Insert
